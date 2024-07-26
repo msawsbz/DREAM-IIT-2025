@@ -6,228 +6,255 @@
     <title>DREAM IIT</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: #ffffff; /* White background */
+            color: #000000; /* Black text */
         }
         header {
-            background: #333;
-            color: #fff;
+            background: #f0f0f0; /* Light gray background for header */
+            color: #000000; /* Black text */
             padding: 1em 0;
             text-align: center;
+            position: relative;
+            border-bottom: 1px solid #000000; /* Black border at the bottom */
         }
         header h1 {
             margin: 0;
+            font-size: 2em;
+            color: #000000; /* Black text */
         }
-        header blockquote {
+        header p {
             margin: 0;
-            font-style: italic;
-            color: #ccc;
+            color: #666666; /* Medium gray text */
+            animation: textSlide 10s infinite;
+            font-size: 1.2em;
+        }
+        @keyframes textSlide {
+            0% { transform: translateX(100%); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        nav {
+            text-align: center;
+            margin: 20px;
         }
         nav ul {
             list-style: none;
             padding: 0;
         }
         nav ul li {
-            display: inline;
-            margin: 0 15px;
+            margin: 10px 0;
         }
         nav ul li a {
-            color: #fff;
+            color: #000000; /* Black text */
             text-decoration: none;
+            font-size: 1.2em;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #e0e0e0; /* Light gray background */
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background: #cccccc; /* Slightly darker gray */
+            color: #000000; /* Black text */
         }
         .container {
             padding: 20px;
         }
-        section {
-            margin-bottom: 20px;
+        .section-content {
+            display: none;
+            background: #f9f9f9; /* Very light gray background */
+            padding: 20px;
+            border-radius: 8px;
+            color: #000000; /* Black text */
+            max-height: 80vh;
+            overflow-y: auto;
+            border: 2px solid #000000; /* Black border */
         }
-        h2 {
-            background: #333;
-            color: #fff;
-            padding: 10px;
-            margin: 0;
+        .section-content.active {
+            display: block;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-        }
-        ul li a {
-            color: #333;
+        .modal-trigger {
+            display: inline-block;
+            color: #000000; /* Black text */
+            background: #e0e0e0; /* Light gray background */
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin: 10px;
+            transition: background 0.3s, color 0.3s;
+            border: 2px solid #000000; /* Black border */
+        }
+        .modal-trigger:hover {
+            background: #cccccc; /* Slightly darker gray */
+            color: #000000; /* Black text */
         }
         footer {
-            background: #333;
-            color: #fff;
+            background: #f0f0f0; /* Light gray background */
+            color: #000000; /* Black text */
             text-align: center;
             padding: 10px 0;
             position: fixed;
             width: 100%;
             bottom: 0;
+            border-top: 1px solid #000000; /* Black border at the top */
         }
     </style>
 </head>
 <body>
     <header>
         <h1>🎯 DREAM IIT👷</h1>
-        ɪɴꜱʜᴀ ᴀʟʟᴀʜ 🤲 ᴡᴇ'ʟʟ ʙᴇ ꜱᴜᴄᴄᴇꜱꜱ 💥 [ꜱʜᴀʜʙᴀᴢ]
-        <nav>
-            <ul>
-                <li><a href="#class11">CLASS 11th</a></li>
-                <li><a href="#class12">CLASS 12th</a></li>
-            </ul>
-        </nav>
+        <p>ɪɴꜱʜᴀ ᴀʟʟᴀʜ 🤲 ᴡᴇ'ʟʟ ʙᴇ ꜱᴜᴄᴄᴇꜱꜱ 💥 [ꜱʜᴀʜʙᴀᴢ]</p>
     </header>
+    <nav>
+        <a href="#" class="modal-trigger" data-target="class11-content">CLASS 11th</a>
+        <a href="#" class="modal-trigger" data-target="class12-content">CLASS 12th</a>
+    </nav>
     <div class="container">
-        <section id="class11">
+        <!-- CLASS 11 Content -->
+        <div class="section-content" id="class11-content">
             <h2>CLASS 11th</h2>
-            <div>
-                <h3>PHYSICS</h3>
-                <ul>
-                    <li>💭 Vectors & Calculus</li>
-                    <li>💭 Units & Dimensions</li>
-                    <li>💭 Kinematics</li>
-                    <li>💭 Errors</li>
-                    <li>💭 Constrained Motion</li>
-                    <li>💭 NLM and Friction</li>
-                    <li>💭 Circular Motion & WPE</li>
-                    <li>💭 Center of Mass</li>
-                    <li>💭 Rotational Motion</li>
-                    <li>💭 Gravitation</li>
-                    <li>💭 Simple Harmonic Motion</li>
-                    <li>💭 Waves</li>
-                    <li>💭 Sound Waves</li>
-                    <li>💭 Heat I</li>
-                    <li>💭 Heat II</li>
-                    <li>💭 Elasticity & Thermal Expansion</li>
-                    <li>💭 Fluids</li>
-                    <li>💭 Surface Tension & Viscosity</li>
-                </ul>
-            </div>
-            <div>
-                <h3>MATHS</h3>
-                <ul>
-                    <li>💭 Basic Maths</li>
-                    <li>💭 Trigonometry Ratios</li>
-                    <li>💭 Quadratic Equation</li>
-                    <li>💭 Trigonometric Equations</li>
-                    <li>💭 Sequence & Progressions</li>
-                    <li>💭 Binomial Theorem</li>
-                    <li>💭 Straight Lines</li>
-                    <li>💭 Circle</li>
-                    <li>💭 Complex Numbers</li>
-                    <li>💭 Permutation & Combination</li>
-                    <li>💭 Parabola</li>
-                    <li>💭 Ellipse</li>
-                    <li>💭 Hyperbola</li>
-                </ul>
-            </div>
-            <div>
-                <h3>ORGANIC CHEMISTRY</h3>
-                <ul>
-                    <li>💭 Basic Organic Chemistry</li>
-                    <li>💭 IUPAC Nomenclature</li>
-                    <li>💭 General Organic Chemistry</li>
-                    <li>💭 Isomerism</li>
-                </ul>
-            </div>
-            <div>
-                <h3>INORGANIC CHEMISTRY</h3>
-                <ul>
-                    <li>💭 General Chemistry</li>
-                    <li>💭 Periodic Table</li>
-                    <li>💭 Chemical Bonding</li>
-                    <li>💭 S-Block</li>
-                    <li>💭 P-Block</li>
-                </ul>
-            </div>
-            <div>
-                <h3>PHYSICAL CHEMISTRY</h3>
-                <ul>
-                    <li>💭 Mole Concept</li>
-                    <li>💭 Concentration Terms</li>
-                    <li>💭 Ideal Gas</li>
-                    <li>💭 Real Gas</li>
-                    <li>💭 Atomic Structure</li>
-                    <li>💭 Redox Reactions</li>
-                    <li>💭 Chemical Equilibrium</li>
-                    <li>💭 Ionic Equilibrium</li>
-                    <li>💭 Thermodynamics</li>
-                </ul>
-            </div>
-        </section>
-        <section id="class12">
+            <h3>Physics</h3>
+            <ul>
+                <li>Vectors & Calculus</li>
+                <li>Units & Dimensions</li>
+                <li>Kinematics</li>
+                <li>Errors</li>
+                <li>Constrained Motion</li>
+                <li>NLM and Friction</li>
+                <li>Circular Motion & WPE</li>
+                <li>Center of Mass</li>
+                <li>Rotational Motion</li>
+                <li>Gravitation</li>
+                <li>Simple Harmonic Motion</li>
+                <li>Waves</li>
+                <li>Sound Waves</li>
+                <li>Heat I</li>
+                <li>Heat II</li>
+                <li>Elasticity & Thermal Expansion</li>
+                <li>Fluids</li>
+                <li>Surface Tension & Viscosity</li>
+            </ul>
+            <h3>Maths</h3>
+            <ul>
+                <li>Basic Maths</li>
+                <li>Trigonometry Ratios</li>
+                <li>Quadratic Equation</li>
+                <li>Trigonometric Equations</li>
+                <li>Sequence & Progressions</li>
+                <li>Complex Numbers</li>
+                <li>Permutations & Combinations</li>
+                <li>Binomial Theorem</li>
+                <li>Coordinate Geometry</li>
+                <li>Probability</li>
+                <li>Vector Algebra</li>
+                <li>3D Geometry</li>
+            </ul>
+            <h3>Chemistry</h3>
+            <ul>
+                <li>Basic Principles</li>
+                <li>Hydrocarbons</li>
+                <li>Functional Groups</li>
+                <li>Alcohols, Phenols & Ethers</li>
+                <li>Carbonyl Compounds</li>
+                <li>Carboxylic Acids</li>
+                <li>Amines</li>
+            </ul>
+            <h3>Inorganic Chemistry</h3>
+            <ul>
+                <li>Periodic Table</li>
+                <li>Hydrogen</li>
+                <li>S-Block Elements</li>
+                <li>P-Block Elements</li>
+                <li>Coordination Chemistry</li>
+            </ul>
+            <h3>Physical Chemistry</h3>
+            <ul>
+                <li>States of Matter</li>
+                <li>Thermodynamics</li>
+                <li>Electrochemistry</li>
+                <li>Surface Chemistry</li>
+                <li>Chemical Kinetics</li>
+            </ul>
+        </div>
+
+        <!-- CLASS 12 Content -->
+        <div class="section-content" id="class12-content">
             <h2>CLASS 12th</h2>
-            <div>
-                <h3>PHYSICS</h3>
-                <ul>
-                    <li>💭 Electrostatics I</li>
-                    <li>💭 Electrostatics II</li>
-                    <li>💭 Current Electricity</li>
-                    <li>💭 Measuring Instruments</li>
-                    <li>💭 Capacitance</li>
-                    <li>💭 Magnetism</li>
-                    <li>💭 Electromagnetic Induction</li>
-                    <li>💭 Alternating Current</li>
-                    <li>💭 Electromagnetic Waves</li>
-                    <li>💭 Modern Physics I</li>
-                    <li>💭 Modern Physics II</li>
-                    <li>💭 Semiconductors</li>
-                    <li>💭 Communication Systems</li>
-                    <li>💭 Geo Optics</li>
-                    <li>💭 Wave Optics</li>
-                </ul>
-            </div>
-            <div>
-                <h3>MATHS</h3>
-                <ul>
-                    <li>💭 Functions</li>
-                    <li>💭 ITF</li>
-                    <li>💭 Limits</li>
-                    <li>💭 Continuity</li>
-                    <li>💭 Differentiability</li>
-                    <li>💭 Matrices</li>
-                    <li>💭 MOD</li>
-                    <li>💭 Determinants</li>
-                    <li>💭 Indefinite Integration</li>
-                    <li>💭 Definite Integration</li>
-                    <li>💭 Area Under Curve</li>
-                    <li>💭 Differential Equation</li>
-                    <li>💭 Vector 3D</li>
-                    <li>💭 Tangent & Normal</li>
-                    <li>💭 Monotonicity</li>
-                    <li>💭 Maxima & Minima</li>
-                    <li>💭 Probability</li>
-                    <li>💭 Complex Numbers</li>
-                </ul>
-            </div>
-            <div>
-                <h3>ORGANIC CHEMISTRY</h3>
-                <ul>
-                    <li>💭 Structural Isomerism</li>
-                    <li>💭 Stereoisomerism</li>
-                    <li>💭 Reaction Mechanism</li>
-                    <li>💭 Carbon Free Radical</li>
-                    <li>💭 Substitution Reaction</li>
-                    <li>💭 Elimination Reaction</li>
-                    <li>💭 Carbonyl Compounds</li>
-                    <li>💭 Carboxylic Acid & Derivatives</li>
-                    <li>💭 Aromatic Compounds</li>
-                    <li>💭 Biomolecules</li>
-                    <li>💭 Polymer & POC</li>
-                </ul>
-            </div>
-            <div>
-                <h3>INORGANIC CHEMISTRY</h3>
-                <ul>
-                    <li>💭 Coordination Chemistry</li>
-                    <li>💭 Metallurgy</li>
-                    <li>💭 S-Block</li>
-                    <li>💭 D-Block</li>
-                    <li>💭 Salt Analysis</li>
-                    <li>💭 P-Block</li>
+            <h3>Physics</h3>
+            <ul>
+                <li>Electrostatics</li>
+                <li>Current Electricity</li>
+                <li>Magnetic Effects of Current</li>
+                <li>Electromagnetic Induction</li>
+                <li>Alternating Current</li>
+                <li>Electromagnetic Waves</li>
+                <li>Modern Physics</li>
+                <li>Optics</li>
+                <li>Atomic Structure</li>
+            </ul>
+            <h3>Maths</h3>
+            <ul>
+                <li>Functions</li>
+                <li>Limits</li>
+                <li>Continuity</li>
+                <li>Differentiation</li>
+                <li>Integration</li>
+                <li>Application of Derivatives</li>
+                <li>Application of Integrals</li>
+                <li>3D Geometry</li>
+                <li>Probability Distributions</li>
+                <li>Vectors</li>
+            </ul>
+            <h3>Chemistry</h3>
+            <ul>
+                <li>Electrochemistry</li>
+                <li>Chemical Kinetics</li>
+                <li>Surface Chemistry</li>
+                <li>Coordination Compounds</li>
+                <li>Haloalkanes and Haloarenes</li>
+                <li>Alcohols, Phenols, and Ethers</li>
+                <li>Aldehydes, Ketones and Carboxylic Acids</li>
+                <li>Organic Compounds Containing Nitrogen</li>
+                <li>Biomolecules</li>
+                <li>Polymers</li>
+                <li>Chemistry in Everyday Life</li>
+            </ul>
+            <h3>Inorganic Chemistry</h3>
+            <ul>
+                <li>Principles of Metallurgy</li>
+                <li>p-Block Elements</li>
+                <li>d- and f-Block Elements</li>
+                <li>Coordination Compounds</li>
+                <li>Environmental Chemistry</li>
+            </ul>
+            <h3>Physical Chemistry</h3>
+            <ul>
+                <li>Solid State</li>
+                <li>Solutions</li>
+                <li>Electrochemistry</li>
+                <li>Chemical Kinetics</li>
+                <li>Surface Chemistry</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        &copy; Powered by shahbaz 
+    </footer>
+    <script>
+        document.querySelectorAll('.modal-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function() {
+                const target = document.getElementById(this.getAttribute('data-target'));
+                document.querySelectorAll('.section-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                target.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
