@@ -90,8 +90,8 @@
             padding: 0;
         }
         .subject-list li, .chapter-list li {
-            margin: 10px 0;
-            padding: 10px;
+            margin: 15px 0;
+            padding: 15px;
             border: 1px solid #004d40; /* Dark teal border */
             border-radius: 10px;
             cursor: pointer;
@@ -105,15 +105,19 @@
         }
         .chapter-list {
             display: none;
-            max-height: 0;
-            overflow: hidden;
+            max-height: auto; /* Change from fixed value to auto */
+            overflow: visible; /* Ensure content is not clipped */
             transition: max-height 0.5s ease-out;
         }
         .chapter-list.active {
             display: block;
-            max-height: 500px; /* Adjust based on content */
+            max-height: none; /* Allow content to grow as needed */
         }
-
+        /* Increase size of CLASS 11th and CLASS 12th boxes */
+        .section-content h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.5em;
@@ -126,7 +130,6 @@
                 padding: 8px 16px;
             }
         }
-
         @media (max-width: 480px) {
             header h1 {
                 font-size: 1.2em;
@@ -163,22 +166,22 @@
         <div class="section-content" id="class11-content">
             <h2>CLASS 11th</h2>
             <ul class="subject-list">
-                <li data-target="class11-physics">Physics</li>
-                <li data-target="class11-maths">Maths</li>
-                <li data-target="class11-chemistry">Chemistry</li>
-                <li data-target="class11-inorganic">Inorganic Chemistry</li>
-                <li data-target="class11-physical">Physical Chemistry</li>
+                <li data-target="class11-Physics">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐒</li>
+                <li data-target="class11-maths">💭𝐌𝐀𝐓𝐇𝐒</li>
+                <li data-target="class11-chemistry">💭𝐎𝐑𝐆𝐀𝐍𝐈𝐂</li>
+                <li data-target="class11-inorganic">💭𝐈𝐍𝐎𝐑𝐆𝐀𝐍𝐈𝐂</li>
+                <li data-target="class11-physical">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐀𝐋</li>
             </ul>
             <div class="chapter-list" id="class11-physics">
-                <h3>Physics</h3>
+                <h3>💭𝐏𝐇𝐘𝐒𝐈𝐂𝐒</h3>
                 <ul>
                     <li>Vectors & Calculus</li>
                     <li>Units & Dimensions</li>
                     <li>Kinematics</li>
                     <li>Errors</li>
                     <li>Constrained Motion</li>
-                    <li>NLM and Friction</li>
-                    <li>Circular Motion & WPE</li>
+                    <li>NLM (Newton's Laws of Motion) and Friction</li>
+                    <li>Circular Motion & WPE (Work, Power & Energy)</li>
                     <li>Center of Mass</li>
                     <li>Rotational Motion</li>
                     <li>Gravitation</li>
@@ -193,7 +196,7 @@
                 </ul>
             </div>
             <div class="chapter-list" id="class11-maths">
-                <h3>Maths</h3>
+                <h3>MATHS</h3>
                 <ul>
                     <li>Basic Maths</li>
                     <li>Trigonometry Ratios</li>
@@ -210,19 +213,20 @@
                 </ul>
             </div>
             <div class="chapter-list" id="class11-chemistry">
-                <h3>Chemistry</h3>
+                <h3>ORGANIC</h3>
                 <ul>
                     <li>Basic Principles</li>
                     <li>Hydrocarbons</li>
                     <li>Functional Groups</li>
-                    <li>Alcohols, Phenols & Ethers</li>
+                    <li>Alcohols</li>
+                    <li>Phenols & Ethers</li>
                     <li>Carbonyl Compounds</li>
                     <li>Carboxylic Acids</li>
                     <li>Amines</li>
                 </ul>
             </div>
             <div class="chapter-list" id="class11-inorganic">
-                <h3>Inorganic Chemistry</h3>
+                <h3>INORGANIC</h3>
                 <ul>
                     <li>Periodic Table</li>
                     <li>Hydrogen</li>
@@ -232,7 +236,7 @@
                 </ul>
             </div>
             <div class="chapter-list" id="class11-physical">
-                <h3>Physical Chemistry</h3>
+                <h3>PHYSICAL</h3>
                 <ul>
                     <li>States of Matter</li>
                     <li>Thermodynamics</li>
@@ -242,16 +246,15 @@
                 </ul>
             </div>
         </div>
-
         <!-- CLASS 12 Content -->
         <div class="section-content" id="class12-content">
             <h2>CLASS 12th</h2>
             <ul class="subject-list">
-                <li data-target="class12-physics">Physics</li>
-                <li data-target="class12-maths">Maths</li>
-                <li data-target="class12-organic">Organic Chemistry</li>
-                <li data-target="class12-inorganic">Inorganic Chemistry</li>
-                <li data-target="class12-physical">Physical Chemistry</li>
+                <li data-target="class12-physics">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐒</li>
+                <li data-target="class12-maths">💭𝐌𝐀𝐓𝐇𝐒</li>
+                <li data-target="class12-organic">💭𝐎𝐑𝐆𝐀𝐍𝐈𝐂</li>
+                <li data-target="class12-inorganic">💭𝐈𝐍𝐎𝐑𝐆𝐀𝐍𝐈𝐂</li>
+                <li data-target="class12-physical">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐀𝐋</li>
             </ul>
             <div class="chapter-list" id="class12-physics">
                 <h3>Physics</h3>
@@ -320,24 +323,22 @@
             </div>
         </div>
     </div>
-
     <script>
-        document.querySelectorAll('.modal-trigger').forEach(item => {
-            item.addEventListener('click', event => {
-                event.preventDefault();
-                const targetId = event.target.getAttribute('data-target');
-                document.querySelectorAll('.section-content').forEach(section => {
-                    section.classList.remove('active');
+        document.querySelectorAll('.modal-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                document.querySelectorAll('.section-content').forEach(content => {
+                    content.classList.remove('active');
                 });
                 document.getElementById(targetId).classList.add('active');
             });
         });
 
-        document.querySelectorAll('.subject-list li').forEach(item => {
-            item.addEventListener('click', event => {
-                const targetId = event.target.getAttribute('data-target');
-                document.querySelectorAll('.chapter-list').forEach(chapter => {
-                    chapter.classList.remove('active');
+        document.querySelectorAll('.subject-list li').forEach(subject => {
+            subject.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                document.querySelectorAll('.chapter-list').forEach(list => {
+                    list.classList.remove('active');
                 });
                 document.getElementById(targetId).classList.add('active');
             });
