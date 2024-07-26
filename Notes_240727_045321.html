@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAM IIT</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e0f7fa; /* Light ocean color background */
+            color: #000000; /* Black text */
+            box-sizing: border-box;
+        }
+        header {
+            background: #00796b; /* Deep teal background for header */
+            color: #ffffff; /* White text */
+            padding: 1em;
+            text-align: center;
+            border-bottom: 4px solid #004d40; /* Darker teal border at the bottom */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 700;
+            color: #ffffff; /* White text */
+        }
+        header p {
+            margin: 0;
+            color: #b2dfdb; /* Light cyan text */
+            animation: textSlide 15s infinite;
+            font-size: 1em;
+            letter-spacing: 1px;
+        }
+        @keyframes textSlide {
+            0% { transform: translateX(100%); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #004d40; /* Dark teal text */
+            text-decoration: none;
+            font-size: 1em;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #b2dfdb; /* Light cyan background */
+            border-radius: 25px;
+            transition: background 0.3s, color 0.3s, transform 0.3s;
+            border: 2px solid #004d40; /* Dark teal border */
+        }
+        nav ul li a:hover {
+            background: #004d40; /* Dark teal background on hover */
+            color: #ffffff; /* White text */
+            transform: scale(1.1); /* Slightly enlarge the button */
+        }
+        .container {
+            padding: 10px;
+            max-width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .section-content {
+            display: none;
+            background: #ffffff; /* White background */
+            padding: 20px;
+            border-radius: 15px;
+            color: #000000; /* Black text */
+            border: 2px solid #004d40; /* Dark teal border */
+        }
+        .section-content.active {
+            display: block;
+        }
+        .subject-list, .chapter-list {
+            list-style: none;
+            padding: 0;
+        }
+        .subject-list li, .chapter-list li {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #004d40; /* Dark teal border */
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            background: #e0f2f1; /* Light teal background */
+        }
+        .subject-list li:hover, .chapter-list li:hover {
+            background: #004d40; /* Dark teal background on hover */
+            color: #ffffff; /* White text */
+            transform: scale(1.05); /* Slightly enlarge the item */
+        }
+        .chapter-list {
+            display: none;
+            max-height: auto; /* Change from fixed value to auto */
+            overflow: visible; /* Ensure content is not clipped */
+            transition: max-height 0.5s ease-out;
+        }
+        .chapter-list.active {
+            display: block;
+            max-height: none; /* Allow content to grow as needed */
+        }
+        /* Increase size of CLASS 11th and CLASS 12th boxes */
+        .section-content h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            nav ul li a {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+            header p {
+                font-size: 0.8em;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            nav ul li a {
+                font-size: 0.8em;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎯 DREAM IIT👷</h1>
+        <p>ɪɴꜱʜᴀ ᴀʟʟᴀʜ 🤲 ᴡᴇ'ʟʟ ʙᴇ ꜱᴜᴄᴄᴇꜱꜱ 💥 [ꜱʜᴀʜʙᴀᴢ]</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" class="modal-trigger" data-target="class11-content">CLASS 11th</a></li>
+            <li><a href="#" class="modal-trigger" data-target="class12-content">CLASS 12th</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- CLASS 11 Content -->
+        <div class="section-content" id="class11-content">
+            <h2>CLASS 11th</h2>
+            <ul class="subject-list">
+                <li data-target="class11-physics">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐒</li>
+                <li data-target="class11-maths">💭𝐌𝐀𝐓𝐇𝐒</li>
+                <li data-target="class11-chemistry">💭𝐎𝐑𝐆𝐀𝐍𝐈𝐂</li>
+                <li data-target="class11-inorganic">💭𝐈𝐍𝐎𝐑𝐆𝐀𝐍𝐈𝐂</li>
+                <li data-target="class11-physical">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐀𝐋</li>
+            </ul>
+            <div class="chapter-list" id="class11-physics">
+                <h3>Physics</h3>
+                <ul>
+                    <li>Vectors & Calculus</li>
+                    <li>Units & Dimensions</li>
+                    <li>Kinematics</li>
+                    <li>Errors</li>
+                    <li>Constrained Motion</li>
+                    <li>NLM (Newton's Laws of Motion) and Friction</li>
+                    <li>Circular Motion & WPE (Work, Power & Energy)</li>
+                    <li>Center of Mass</li>
+                    <li>Rotational Motion</li>
+                    <li>Gravitation</li>
+                    <li>Simple Harmonic Motion</li>
+                    <li>Waves</li>
+                    <li>Sound Waves</li>
+                    <li>Heat I</li>
+                    <li>Heat II</li>
+                    <li>Elasticity & Thermal Expansion</li>
+                    <li>Fluids</li>
+                    <li>Surface Tension & Viscosity</li>
+                </ul>
+            </div>
+            <div class="chapter-list" id="class11-maths">
+                <h3>MATHS</h3>
+                <ul>
+                    <li>Basic Maths</li>
+                    <li>Trigonometry Ratios</li>
+                    <li>Quadratic Equation</li>
+                    <li>Trigonometric Equations</li>
+                    <li>Sequence & Progressions</li>
+                    <li>Complex Numbers</li>
+                    <li>Permutations & Combinations</li>
+                    <li>Binomial Theorem</li>
+                    <li>Coordinate Geometry</li>
+                    <li>Probability</li>
+                    <li>Vector Algebra</li>
+                    <li>3D Geometry</li>
+                </ul>
+            </div>
+            <div class="chapter-list" id="class11-chemistry">
+                <h3>ORGANIC</h3>
+                <ul>
+                    <li>Basic Principles</li>
+                    <li>Hydrocarbons</li>
+                    <li>Functional Groups</li>
+                    <li>Alcohols</li>
+                    <li>Phenols & Ethers</li>
+                    <li>Carbonyl Compounds</li>
+                    <li>Carboxylic Acids</li>
+                    <li>Amines</li>
+                </ul>
+            </div>
+            <div class="chapter-list" id="class11-inorganic">
+                <h3>INORGANIC</h3>
+                <ul>
+                    <li>Periodic Table</li>
+                    <li>Hydrogen</li>
+                    <li>S-Block Elements</li>
+                    <li>P-Block Elements</li>
+                    <li>Coordination Chemistry</li>
+                </ul>
+            </div>
+            <div class="chapter-list" id="class11-physical">
+                <h3>PHYSICAL</h3>
+                <ul>
+                    <li>States of Matter</li>
+                    <li>Thermodynamics</li>
+                    <li>Electrochemistry</li>
+                    <li>Surface Chemistry</li>
+                    <li>Chemical Kinetics</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CLASS 12 Content -->
+        <div class="section-content" id="class12-content">
+            <h2>CLASS 12th</h2>
+            <ul class="subject-list">
+                <li data-target="class12-physics">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐒</li>
+                <li data-target="class12-maths">💭𝐌𝐀𝐓𝐇𝐒</li>
+                <li data-target="class12-organic">💭𝐎𝐑𝐆𝐀𝐍𝐈𝐂</li>
+                <li data-target="class12-inorganic">💭𝐈𝐍𝐎𝐑𝐆𝐀𝐍𝐈𝐂</li>
+                <li data-target="class12-physical">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐀𝐋</li>
+            </ul>
+            <div class="chapter-list" id="class12-physics">
+                <h3>Physics</h3>
+                <ul>
+                    <li>Electrostatics</li>
+                    <li>Current Electricity</li>
+                    <li>Magnetic Effects of Current</li>
+                    <li>Electromagnetic Induction</li>
+                    <li>Alternating Current</li>
+                    <li>Electromagnetic Waves</li>
+                    <li>Modern Physics</li>
+                    <li>Optics</li>
+                    <li>Atomic Structure</li>
+                </ul>
+            </div>
+            <div class="chapter-list" id="class12-maths">
+                <h3>MATHS</h3>
+                <ul>
+                    <li>Functions</li>
+                    <li>Limits</li>
+                    <li>Continuity</li>
+                    <li>Differentiation</li>
+                    <li>Integration</li>
+                    <li>Application of Derivatives</li>
+                    <li>Application of Integrals</li>
+                    <li>3D Geometry</li>
+                    <li>Probability Distributions</li>
+                    <li>Vectors</li>
+                </ul>
+            </div>
+            <div class="chapter-list" id="class12-organic">
+                <h3>ORGANIC</h3>
+                <ul>
+                    <li>Electrochemistry</li>
+                    <li>Chemical Kinetics</li>
+                    <li>Surface Chemistry</li>
+                    <li>Coordination Compounds</li>
+                    <li>Haloalkanes and Haloarenes</li>
+                    <li>Alcohols, Phenols, and Ethers</li>
+                    <li>Aldehydes, Ketones and Carboxylic Acids</li>
+                    <li>Organic Compounds Containing Nitrogen</li>
+                    <li>Biomolecules</li>
+                    <li>Polymers</li>
+                    <li>Chemistry in Everyday Life</li>
+                </ul>
+            </div>
+            <div class="chapter-list" id="class12-inorganic">
+                <h3>INORGANIC</h3>
+                <ul>
+                    <li>Principles of Metallurgy</li>
+                    <li>p-Block Elements</li>
+                    <li>d- and f-Block Elements</li>
+                    <li>Coordination Compounds</li>
+                    <li>Environmental Chemistry</li>
+                </ul>
+            </div>
+            <div class="chapter-list" id="class12-physical">
+                <h3>PHYSICAL</h3>
+                <ul>
+                    <li>Solid State</li>
+                    <li>Solutions</li>
+                    <li>Electrochemistry</li>
+                    <li>Chemical Kinetics</li>
+                    <li>Surface Chemistry</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var modalTriggers = document.querySelectorAll(".modal-trigger");
+            modalTriggers.forEach(function(trigger) {
+                trigger.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    var targetId = this.getAttribute("data-target");
+                    var allSections = document.querySelectorAll(".section-content");
+                    allSections.forEach(function(section) {
+                        section.classList.remove("active");
+                    });
+                    var targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add("active");
+                    }
+                });
+            });
+
+            var subjectItems = document.querySelectorAll(".subject-list li");
+            subjectItems.forEach(function(item) {
+                item.addEventListener("click", function() {
+                    var targetId = this.getAttribute("data-target");
+                    var allChapters = document.querySelectorAll(".chapter-list");
+                    allChapters.forEach(function(chapter) {
+                        chapter.classList.remove("active");
+                    });
+                    var targetChapter = document.getElementById(targetId);
+                    if (targetChapter) {
+                        targetChapter.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
