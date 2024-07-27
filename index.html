@@ -166,15 +166,15 @@
         <div class="section-content" id="class11-content">
             <h2>CLASS 11th</h2>
             <ul class="subject-list">
-                <li data-target="class11-Physics">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐒</li>
+                <li data-target="class11-physics">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐒</li>
                 <li data-target="class11-maths">💭𝐌𝐀𝐓𝐇𝐒</li>
                 <li data-target="class11-chemistry">💭𝐎𝐑𝐆𝐀𝐍𝐈𝐂</li>
                 <li data-target="class11-inorganic">💭𝐈𝐍𝐎𝐑𝐆𝐀𝐍𝐈𝐂</li>
                 <li data-target="class11-physical">💭𝐏𝐇𝐘𝐒𝐈𝐂𝐀𝐋</li>
             </ul>
             <div class="chapter-list" id="class11-physics">
-                <h3>💭𝐏𝐇𝐘𝐒𝐈𝐂𝐒</h3>
-                <ul>
+                <h3>Physics</h3>
+                 <ul>
                     <li>Vectors & Calculus</li>
                     <li>Units & Dimensions</li>
                     <li>Kinematics</li>
@@ -246,6 +246,7 @@
                 </ul>
             </div>
         </div>
+        
         <!-- CLASS 12 Content -->
         <div class="section-content" id="class12-content">
             <h2>CLASS 12th</h2>
@@ -258,7 +259,7 @@
             </ul>
             <div class="chapter-list" id="class12-physics">
                 <h3>Physics</h3>
-                <ul>
+                 <ul>
                     <li>Electrostatics</li>
                     <li>Current Electricity</li>
                     <li>Magnetic Effects of Current</li>
@@ -271,7 +272,7 @@
                 </ul>
             </div>
             <div class="chapter-list" id="class12-maths">
-                <h3>Maths</h3>
+                <h3>MATHS</h3>
                 <ul>
                     <li>Functions</li>
                     <li>Limits</li>
@@ -286,7 +287,7 @@
                 </ul>
             </div>
             <div class="chapter-list" id="class12-organic">
-                <h3>Organic Chemistry</h3>
+                <h3>ORGANIC</h3>
                 <ul>
                     <li>Electrochemistry</li>
                     <li>Chemical Kinetics</li>
@@ -302,7 +303,7 @@
                 </ul>
             </div>
             <div class="chapter-list" id="class12-inorganic">
-                <h3>Inorganic Chemistry</h3>
+                <h3>INORGANIC</h3>
                 <ul>
                     <li>Principles of Metallurgy</li>
                     <li>p-Block Elements</li>
@@ -312,7 +313,7 @@
                 </ul>
             </div>
             <div class="chapter-list" id="class12-physical">
-                <h3>Physical Chemistry</h3>
+                <h3>PHYSICAL</h3>
                 <ul>
                     <li>Solid State</li>
                     <li>Solutions</li>
@@ -324,23 +325,36 @@
         </div>
     </div>
     <script>
-        document.querySelectorAll('.modal-trigger').forEach(trigger => {
-            trigger.addEventListener('click', function() {
-                const targetId = this.getAttribute('data-target');
-                document.querySelectorAll('.section-content').forEach(content => {
-                    content.classList.remove('active');
+        document.addEventListener("DOMContentLoaded", function() {
+            var modalTriggers = document.querySelectorAll(".modal-trigger");
+            modalTriggers.forEach(function(trigger) {
+                trigger.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    var targetId = this.getAttribute("data-target");
+                    var allSections = document.querySelectorAll(".section-content");
+                    allSections.forEach(function(section) {
+                        section.classList.remove("active");
+                    });
+                    var targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add("active");
+                    }
                 });
-                document.getElementById(targetId).classList.add('active');
             });
-        });
 
-        document.querySelectorAll('.subject-list li').forEach(subject => {
-            subject.addEventListener('click', function() {
-                const targetId = this.getAttribute('data-target');
-                document.querySelectorAll('.chapter-list').forEach(list => {
-                    list.classList.remove('active');
+            var subjectItems = document.querySelectorAll(".subject-list li");
+            subjectItems.forEach(function(item) {
+                item.addEventListener("click", function() {
+                    var targetId = this.getAttribute("data-target");
+                    var allChapters = document.querySelectorAll(".chapter-list");
+                    allChapters.forEach(function(chapter) {
+                        chapter.classList.remove("active");
+                    });
+                    var targetChapter = document.getElementById(targetId);
+                    if (targetChapter) {
+                        targetChapter.classList.add("active");
+                    }
                 });
-                document.getElementById(targetId).classList.add('active');
             });
         });
     </script>
